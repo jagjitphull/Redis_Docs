@@ -13,3 +13,6 @@ services:
     environment:
       - ACCEPT_EULA=y
       - SA_PASSWORD=A!VeryComplex123Password
+
+#Run docker compose up
+#execute dotnet run , in your root project.
