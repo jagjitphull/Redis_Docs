@@ -2,7 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using RedisAndEntityFrameworkInWebApi.Data;
 
-//Below the line var builder = WebApplication.CreateBuilder(args);, add Redis and SQL Server to the service collection:
+//Below the line 
+var builder = WebApplication.CreateBuilder(args);      //add Redis and SQL Server to the service collection:
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {
@@ -12,7 +13,8 @@ builder.Services.AddStackExchangeRedisCache(options =>
 builder.Services.AddDbContext<KeyAndValueContext>(options =>
    options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase")));
 
-// Below the line var app = builder.Build(); add the following:
+// Below the line 
+var app = builder.Build();                   // add the following:
 using(var scope = app.Services.CreateScope())
 {
    var keyAndValueContext = scope.ServiceProvider.GetRequiredService<KeyAndValueContext>();
