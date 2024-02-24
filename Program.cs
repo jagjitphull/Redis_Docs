@@ -1,5 +1,13 @@
 // See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
+//*******************************************************************//
+// Belo steps to execute program
+//  dotnet new console -n RedisStreamsBasics
+//  cd RedisStreamsBasics
+//  dotnet add package StackExchange.Redis
+//Paste the below code into Program.cs
+// dotnet run - from project directory
+//*******************************************************************//
 using StackExchange.Redis;
 
 var tokenSource = new CancellationTokenSource();
