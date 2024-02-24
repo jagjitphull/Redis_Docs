@@ -1,3 +1,5 @@
+# This is an example for understanding Redis transactions
+
 import redis
 
 # Connect to Redis
